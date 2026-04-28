@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: radial-gradient(ellipse at center, #ebe7e6 0%, #ebe7e6 60%, #e0ddde 100%);
+            color: #222;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+ 
+        /* ── Navigation ── */
+        nav {
+            background-color: #fff;
+            padding: 18px 100px;
+            margin: 22px auto;
+            width: fit-content;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+        }
+ 
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 11.5px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color 0.25s;
+            position: relative;
+            padding-bottom: 3px;
+        }
+ 
+        nav a:hover { 
+            color: #D48EC8; 
+            font-weight: 700;
+        }
+ 
+        nav a.active {
+            border-bottom: 2.5px solid #222;
+            font-weight: 700;
+        }
+ 
+        /* ── Hero Wrapper ── */
+        .hero {
+            position: relative;
+            min-height: calc(100vh - 88px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 0 60px;
+            overflow: hidden;
+        }
+ 
+        /* Giant DESIGNER text — sits behind everything */
+        .designer-bg {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: clamp(100px, 16vw, 200px);
+            color: #d8acc3;
+            letter-spacing: 6px;
+            line-height: 1;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 145px;
+            left: 0;
+            z-index: 1;
+            user-select: none;
+            pointer-events: none;
+        }
+ 
+        /* Italic subtitle — floats above the D */
+        .subtitle-row {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            width: 100%;
+            text-align: center;
+            pointer-events: none;
+        }
+ 
+        .subtitle-row span {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-size: clamp(78px, 8vw, 95px);
+            color: #1a1a1a;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+ 
+        /* Person image — layers on top of DESIGNER text */
+        .hero-photo {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+            height: 750px;
+            width: auto;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+ 
+        .hero-photo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+ 
+        /* Placeholder silhouette when no real photo */
+        .photo-placeholder {
+            height: 520px;
+            width: 320px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+ 
+        .photo-placeholder svg {
+            height: 100%;
+            width: auto;
+        }
+ 
+        /* ── Bottom row: description | (empty center) | skills ── */
+        .bottom-row {
+            position: absolute;
+            bottom: 150px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 60px;
+            z-index: 5;
+        }
+ 
+        /* Description block — lower left */
+        .description {
+            max-width: 360px;
+            font-size: 22px;
+            line-height: 1.85;
+            color: #333;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            margin-left: 170px;
+        }
+ 
+        .description strong {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+ 
+        /* Skill tags — lower right */
+        .skills {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 15px;
+            position: relative;
+            margin-right: 200px;
+        }
+ 
+        .skills-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+ 
+        .skill-tag {
+            background-color: #1e1e1e;
+            color: #fff;
+            padding: 15px 28px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            white-space: nowrap;
+        }
+ 
+        .skill-tag.pink {
+            background-color: #d8acc3;
+            color: #000;
+        }
+ 
+        /* Decorative asterisk */
+        .asterisk {
+            width: 30px;
+            height: 30px;
+            background: #d8acc3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+ 
+        /* CTA Button */
+        .cta-wrap {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 6;
+        }
+ 
+        .cta-button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 18px 60px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            white-space: nowrap;
+        }
+ 
+        .cta-button:hover {
+            background-color: #d8acc3;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(212,142,200,0.35);
+        }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+            .designer-bg { font-size: clamp(60px, 13vw, 110px); top: 85px; }
+            .hero-photo { height: 380px; }
+            .photo-placeholder { height: 360px; width: 220px; }
+            .bottom-row { flex-direction: column; align-items: center; gap: 28px; bottom: 90px; padding: 0 20px; }
+            .description { text-align: center; max-width: 320px; }
+            .skills { align-items: center; }
+        }
+ 
+        @media (max-width: 600px) {
+            nav { gap: 14px; padding: 12px 20px; margin: 14px 16px; flex-wrap: wrap; }
+            nav a { font-size: 9.5px; }
+            .designer-bg { font-size: 60px; top: 75px; }
+            .subtitle-row span { font-size: 24px; }
+            .hero-photo { height: 300px; top: 40px; }
+        }
