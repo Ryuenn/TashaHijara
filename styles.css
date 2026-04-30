@@ -1295,3 +1295,270 @@
             .accordion-body { gap: 16px; }
             .accordion-tag { padding: 8px 16px; font-size: 11px; }
         }
+
+        /* ── CTA Final Section ── */
+        .cta-final {
+            position: relative;
+            background-color: #ffffff;
+            padding: 60px 60px;
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .cta-final-bg-shape {
+            display: none;
+        }
+
+        .cta-final-container {
+            position: relative;
+            z-index: 2;
+            background: #ffffff;
+            border: 2px solid #d0d0d0;
+            border-radius: 40px;
+            padding: 60px 100px;
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .cta-final-asterisk-left,
+        .cta-final-asterisk-right {
+            position: absolute;
+            font-size: 80px;
+            color: #1a1a1a;
+            font-weight: 900;
+            flex-shrink: 0;
+            top: 50px;
+        }
+
+        .cta-final-asterisk-left {
+            left: 70px;
+        }
+
+        .cta-final-asterisk-right {
+            right: 70px;
+            color: #d8acc3;
+        }
+
+        .cta-final-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+            width: 100%;
+            padding: 0 40px 40px 40px;
+        }
+
+        .cta-final-heading {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 54px;
+            color: #1a1a1a;
+            font-weight: 400;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .cta-final-subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            color: #d8acc3;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .cta-final-body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .cta-final-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding-top: 40px;
+            margin: 0 -140px -60px -140px;
+            padding: 40px 140px 40px 140px;
+            border-top: 2.5px solid #1a1a1a;
+            flex-wrap: wrap;
+            width: calc(100% + 280px);
+        }
+
+        .cta-final-btn {
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            white-space: nowrap;
+        }
+
+        .cta-final-btn::after {
+            content: '→';
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-pink {
+            background-color: #d8acc3;
+            color: #1a1a1a;
+            border: 2px solid #d8acc3;
+        }
+
+        .btn-pink:hover {
+            background-color: transparent;
+            color: #d8acc3;
+            box-shadow: 0 8px 24px rgba(216, 172, 195, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-pink:hover::after {
+            transform: translateX(4px);
+        }
+
+        .btn-dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: 2px solid #1a1a1a;
+        }
+
+        .btn-dark:hover {
+            background-color: transparent;
+            color: #1a1a1a;
+            box-shadow: 0 8px 24px rgba(26, 26, 26, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 60px;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive: CTA & Footer */
+        @media (max-width: 1200px) {
+            .cta-final {
+                padding: 80px 40px;
+            }
+
+            .cta-final-container {
+                padding: 50px 80px;
+            }
+
+            .cta-final-heading {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .cta-final {
+                padding: 60px 30px;
+                min-height: auto;
+            }
+
+            .cta-final-container {
+                padding: 40px 40px;
+            }
+
+            .cta-final-asterisk-left,
+            .cta-final-asterisk-right {
+                display: none;
+            }
+
+            .cta-final-heading {
+                font-size: 36px;
+            }
+
+            .cta-final-subtitle {
+                font-size: 14px;
+            }
+
+            .cta-final-body {
+                font-size: 16px;
+            }
+
+            .cta-final-buttons {
+                gap: 14px;
+                width: 100%;
+            }
+
+            .cta-final-btn {
+                flex: 1;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cta-final {
+                padding: 40px 20px;
+            }
+
+            .cta-final-container {
+                padding: 30px 20px;
+                border-radius: 24px;
+            }
+
+            .cta-final-content {
+                padding: 0 20px 30px 20px;
+            }
+
+            .cta-final-heading {
+                font-size: 28px;
+            }
+
+            .cta-final-subtitle {
+                font-size: 12px;
+            }
+
+            .cta-final-body {
+                font-size: 14px;
+            }
+
+            .cta-final-btn {
+                padding: 14px 32px;
+                font-size: 11px;
+            }
+
+            .cta-final-btn::after {
+                font-size: 14px;
+            }
+
+            .footer {
+                padding: 30px 20px;
+                font-size: 12px;
+            }
+        }
